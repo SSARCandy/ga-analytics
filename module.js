@@ -86,7 +86,7 @@ module.exports = function(settings, final_callback) {
 			return;
 		}
 		
-		fs.writeFile(sessionFile, JSON.stringify(result));
+		fs.writeFileSync(sessionFile, JSON.stringify(result));
 
 		oauth2Client.setCredentials({
 			access_token: result.access_token,
